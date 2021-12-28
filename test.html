@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- library css -->
+  <link rel="stylesheet" href="./asset/css/libs/swiper.css">
+  <!-- library js -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="./asset/js/libs/swiper.js"></script>
+
+  <style>
+    .item-list { overflow: hidden; }
+    .item { min-height: 500px; }
+    .item:nth-child(1) { background: rgba(0,0,0,1);}
+    .item:nth-child(2) { background: rgba(0,0,0,0.5);}
+    .item:nth-child(3) { background: rgba(0,0,0,0);}
+  </style>
+</head>
+<body>
+  <div class="item-list swiper">
+    <div class="swiper-wrapper">
+      <div class="item swiper-slide">슬라이드</div>
+      <div class="item swiper-slide">슬라이드</div>
+      <div class="item swiper-slide">슬라이드</div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script>
+    new Swiper(".item-list", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+      },
+    });
+  </script>
+</body>
+</html>
