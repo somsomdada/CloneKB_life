@@ -39,4 +39,17 @@ $(function(){
     // 멈춰야하니까 stop 넣어주고
     $('.controller').addClass('stop');    
   }
+
+    // 상품 탭
+  $('.main-product ul li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.main-product ul li').removeClass('active');
+    $('.main-product .con-area').removeClass('active');
+
+    $(this).addClass('active');
+    $("#"+tab_id).addClass('active');
+  });
+
+
 });
